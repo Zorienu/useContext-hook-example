@@ -4,7 +4,7 @@ import "./App.css";
 import UserList from "./components/UserList";
 import Profile from "./components/Profile";
 
-// Context
+// context
 import UserState from "./context/User/UserState";
 
 import "bootstrap/dist/css/bootstrap.min.css";

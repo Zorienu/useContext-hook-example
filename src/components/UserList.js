@@ -7,11 +7,10 @@ const UserList = () => {
 
   useEffect(() => {
     getUsers();
-    console.log(users);
   }, []);
 
   return (
-    <div className="list-group h-100">
+    <div className="list-group">
       {users.map((user) => (
         <a
           className="list-group-item list-group-item-action d-flex flex-row justify-content-start align-items-center"

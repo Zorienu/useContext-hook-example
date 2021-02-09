@@ -9,6 +9,7 @@ const UserState = (props) => {
     users: [],
     selectedUser: null,
   };
+
   const [state, dispatch] = useReducer(UserReducer, initialState);
 
   const getUsers = async () => {
@@ -27,6 +28,8 @@ const UserState = (props) => {
     });
   };
 
+  // All consumers that are descendants of a Provider will re-render whenever the Provider's value prop changes
+  // A context helps us to handle state without passing down props on every component.
   return (
     <UserContext.Provider
       value={{
