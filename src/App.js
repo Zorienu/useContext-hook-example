@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+// components
+import UserList from "./components/UserList";
+import Profile from "./components/Profile";
+
+// Context
+import UserState from "./context/User/UserState";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserState>
+      <div className="container p-4">
+        <div className="row">
+          <div className="col-sm-7">
+            <UserList />
+          </div>
+          <div className="col-sm-5">
+            <Profile />
+          </div>
+        </div>
+      </div>
+    </UserState>
   );
 }
 
